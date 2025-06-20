@@ -12,7 +12,7 @@ services:
       - DATABASE_PORT=3306
       - DATABASE_NAME=first
       - DATABASE_USER=root
-      - DATABASE_PASSWORD=1234
+      - DATABASE_PASSWORD=Test123
     depends_on:
       - db
     networks:
@@ -20,48 +20,18 @@ services:
         ipv4_address: 172.30.0.22
 
   db:
-    image: mariadb
+    image: mariadb:latest
     environment:
       MYSQL_DATABASE: first
-      MYSQL_USER: kali
-      MYSQL_PASSWORD: kali
-      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_USER: user
+      MYSQL_PASSWORD: Test123
+      MYSQL_ROOT_PASSWORD: Test123
     volumes:
       - db_data:/var/lib/mysql
     networks:
       custom_network:
         ipv4_address: 172.30.0.23
         
-  open-appsec-agent:
-    image: ghcr.io/openappsec/agent:latest
-    container_name: open-appsec-agent
-    ipc: host
-    environment:
-      - registered_server=NGINX
-      - AGENT_TOKEN=cp-64d78ed5-4c5a-4c1b-b4a0-4a9b296b4c787c3d82a1-fb4b-46ba-bbf1-98ee0950520e
-    volumes:
-      - ./openappsec/config:/etc/cp/conf
-      - ./openappsec/data:/etc/cp/data
-      - ./openappsec/debug:/etc/cp/nano_agent
-    networks:
-      - custom_network
-
-  open-appsec-nginx:
-    image: ghcr.io/openappsec/nginx-attachment:latest
-    container_name: open-appsec-nginx
-    depends_on:
-      - web
-      - open-appsec-agent
-    ipc: host
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/web.conf:/etc/nginx/conf.d/default.conf
-    networks:
-      custom_network:
-        ipv4_address: 172.30.0.24
-        
-
 volumes:
   db_data: {}
 
