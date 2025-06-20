@@ -1,101 +1,150 @@
 body {
-    background-color: #0d0d0d; /* почти чёрный фон */
-    color: #3f3; /* зелёный цвет текста */
-    font-family: 'Courier New', monospace; /* шрифт как в терминале */
-    margin: 0; /* обнуление внешних отступов */
-    padding: 0; /* обнуление внутренних отступов */
+    background-color: #f8f9fa; /* светлый серо-белый фон */
+    color: #495057; /* тёмно-серый цвет текста */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* более современный шрифт */
+    margin: 0;
+    padding: 0;
 }
 
-.container { 
-    max-width: 800px; /* максимальная ширина 800px */ 
-    margin: 0 auto; /* центрирует контейнер горизонтально */ 
-    padding: 20px; /* внутренний отступ со всех сторон */ 
-}
-h1, h2 { 
-    color: #3f3; /* зелёный цвет текста */ 
-    text-align: center; /* текст по центру */ 
-}
-.navbar { 
-    border-bottom: 2px solid #3f3; /* нижняя зелёная граница толщиной 2px */ 
-}
-.me-2 { 
-    width: 5%; /* логотип занимает 5% от родительского блока */ 
-}
-.hacker-img { 
-    max-width: 50%; /* изображение занимает до 50% ширины родителя */ 
-    height: auto; /* высота автоматически пропорциональна ширине */ 
-    border: 2px solid #3f3; /* зелёная граница */ 
-    box-shadow: 0 0 10px #3f3; /* зелёное свечение вокруг изображения */ 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* белый фон контейнера */
+    border-radius: 8px; /* скруглённые углы */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* лёгкая тень */
+    margin-top: 30px;
 }
 
-.story-container { display: flex; /* элементы располагаются горизонтально (в ряд) */ 
-    align-items: center; /* вертикальное выравнивание по центру */ 
-    justify-content: space-between; /* распределение пространства между элементами */ 
-    margin-bottom: 20px; /* нижний отступ */ 
+h1, h2 {
+    color: #2c3e50; /* тёмно-синий цвет заголовков */
+    text-align: center;
+    font-weight: 600; /* полужирное начертание */
 }
 
-.story-text { 
-    max-width: 50%; /* текст занимает до 50% родительского блока */ 
-    text-align: left; /* выравнивание текста слева */ 
-}
-.btn-primary { 
-    background-color: #3f3; /* зелёный фон кнопки */ 
-    border: none; /* убираем границу */ 
-    color: #0d0d0d; /* тёмный цвет текста */ 
-    padding: 0.5rem 1rem; /* внутренние отступы (8px сверху/снизу, 16px слева/справа) */ 
-    font-size: 1rem; /* размер шрифта 16px */ 
-    cursor: pointer; /* курсор-рука при наведении */ 
-    transition: background-color 0.3s ease; /* плавная анимация изменения фона */ 
-} 
-.btn-primary:hover { 
-    background-color: #28cc28; /* при наведении фон становится более тёмно-зелёным */ 
+.navbar {
+    border-bottom: 2px solid #dee2e6; /* светлая серая граница */
+    background-color: #fff !important;
 }
 
-.hacker-input { background-color: #0d0d0d; /* чёрный фон полей ввода */ 
-    border: 1px solid #3f3; /* зелёная граница */ 
-    color: #3f3; /* зелёный текст */ padding: 0.5rem; /* отступ внутри полей */ 
-    font-family: 'Courier New', monospace; /* шрифт терминала */ 
-} 
-.hacker-input::placeholder { 
-    color: #3f3; /* зелёный цвет текста подсказки */ 
-    opacity: 0.7; /* немного прозрачности подсказке */ 
-} 
-.hacker-input:focus { 
-    background-color: #0d0d0d; /* фон не меняется при фокусе */ 
-    border-color: #28cc28; /* граница становится более ярко-зелёной */ 
-    box-shadow: 0 0 5px #3f3; /* зелёное свечение вокруг поля */ 
-    color: #3f3; /* цвет текста остаётся зелёным */ 
-}
-.form-group { 
-    margin-bottom: 1rem; /* нижний отступ между элементами формы */ 
-}
-.form-label { 
-    color: #3f3; /* зелёный цвет текста меток */ 
-    margin-bottom: 0.5rem; /* небольшой нижний отступ */ 
+.me-2 {
+    width: 5%;
 }
 
-.btn-outline-danger { 
-    border-color: #dc3545; /* красная граница */ 
-    color: #dc3545; /* красный текст */ 
-    transition: all 0.3s ease; /* плавный переход всех изменений */ 
-} 
-.btn-outline-danger:hover { 
-    background-color: #dc3545; /* красный фон при наведении */ 
-    color: #fff; /* белый текст при наведении */ 
+.hacker-img {
+    max-width: 50%;
+    height: auto;
+    border: 2px solid #e9ecef; /* светлая граница */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* мягкая тень */
 }
 
-.hacker-input[type="file"] { 
-    padding: 0.5rem; /* внутренний отступ */
-    border: 1px solid #3f3; /* зелёная граница */ color: #3f3; /* зелёный текст */ 
-    background-color: #0d0d0d; /* чёрный фон */ 
-    font-family: 'Courier New', monospace; /* шрифт терминала */ 
-} 
-.hacker-input[type="file"]::file-selector-button { 
-    background-color: #3f3; /* зелёный фон кнопки выбора файла */ 
-    border: none; /* нет границы */ color: #0d0d0d; /* тёмный текст */ 
-    padding: 0.5rem 1rem; /* отступы */ font-family: 'Courier New', monospace; /* шрифт терминала */ 
-    cursor: pointer; /* курсор в виде руки */ transition: background-color 0.3s ease; /* плавная анимация фона */ 
-} 
-.hacker-input[type="file"]::file-selector-button:hover { 
-    background-color: #28cc28; /* при наведении более тёмный зелёный фон */ 
+.story-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.story-text {
+    max-width: 50%;
+    text-align: left;
+    color: #495057;
+    line-height: 1.6; /* улучшенная читаемость */
+}
+
+.btn-primary {
+    background-color: #3498db; /* приятный синий */
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; /* более тёмный синий при наведении */
+    transform: translateY(-1px); /* лёгкий эффект поднятия */
+}
+
+.hacker-input {
+    background-color: #fff;
+    border: 1px solid #ced4da; /* светлая серая граница */
+    color: #495057;
+    padding: 0.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.hacker-input::placeholder {
+    color: #adb5bd; /* серый цвет плейсхолдера */
+}
+
+.hacker-input:focus {
+    background-color: #fff;
+    border-color: #3498db; /* синяя граница при фокусе */
+    box-shadow: 0 0 0 0.2rem rgba(52,152,219,.25); /* голубая подсветка */
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.btn-outline-danger {
+    border-color: #e74c3c; /* красный */
+    color: #e74c3c;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.hacker-input[type="file"] {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    color: #495057;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 4px;
+}
+
+.hacker-input[type="file"]::file-selector-button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.hacker-input[type="file"]::file-selector-button:hover {
+    background-color: #2980b9;
+}
+
+/* Дополнительные улучшения */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
 }
