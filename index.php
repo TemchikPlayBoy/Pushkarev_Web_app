@@ -1,6 +1,5 @@
 <?php
 
-
 if (isset($_COOKIE['User'])) {
     header("Location: /profile.php");
     exit();
