@@ -1,0 +1,101 @@
+body {
+    background-color: #0d0d0d; /* почти чёрный фон */
+    color: #3f3; /* зелёный цвет текста */
+    font-family: 'Courier New', monospace; /* шрифт как в терминале */
+    margin: 0; /* обнуление внешних отступов */
+    padding: 0; /* обнуление внутренних отступов */
+}
+
+.container { 
+    max-width: 800px; /* максимальная ширина 800px */ 
+    margin: 0 auto; /* центрирует контейнер горизонтально */ 
+    padding: 20px; /* внутренний отступ со всех сторон */ 
+}
+h1, h2 { 
+    color: #3f3; /* зелёный цвет текста */ 
+    text-align: center; /* текст по центру */ 
+}
+.navbar { 
+    border-bottom: 2px solid #3f3; /* нижняя зелёная граница толщиной 2px */ 
+}
+.me-2 { 
+    width: 5%; /* логотип занимает 5% от родительского блока */ 
+}
+.hacker-img { 
+    max-width: 50%; /* изображение занимает до 50% ширины родителя */ 
+    height: auto; /* высота автоматически пропорциональна ширине */ 
+    border: 2px solid #3f3; /* зелёная граница */ 
+    box-shadow: 0 0 10px #3f3; /* зелёное свечение вокруг изображения */ 
+}
+
+.story-container { display: flex; /* элементы располагаются горизонтально (в ряд) */ 
+    align-items: center; /* вертикальное выравнивание по центру */ 
+    justify-content: space-between; /* распределение пространства между элементами */ 
+    margin-bottom: 20px; /* нижний отступ */ 
+}
+
+.story-text { 
+    max-width: 50%; /* текст занимает до 50% родительского блока */ 
+    text-align: left; /* выравнивание текста слева */ 
+}
+.btn-primary { 
+    background-color: #3f3; /* зелёный фон кнопки */ 
+    border: none; /* убираем границу */ 
+    color: #0d0d0d; /* тёмный цвет текста */ 
+    padding: 0.5rem 1rem; /* внутренние отступы (8px сверху/снизу, 16px слева/справа) */ 
+    font-size: 1rem; /* размер шрифта 16px */ 
+    cursor: pointer; /* курсор-рука при наведении */ 
+    transition: background-color 0.3s ease; /* плавная анимация изменения фона */ 
+} 
+.btn-primary:hover { 
+    background-color: #28cc28; /* при наведении фон становится более тёмно-зелёным */ 
+}
+
+.hacker-input { background-color: #0d0d0d; /* чёрный фон полей ввода */ 
+    border: 1px solid #3f3; /* зелёная граница */ 
+    color: #3f3; /* зелёный текст */ padding: 0.5rem; /* отступ внутри полей */ 
+    font-family: 'Courier New', monospace; /* шрифт терминала */ 
+} 
+.hacker-input::placeholder { 
+    color: #3f3; /* зелёный цвет текста подсказки */ 
+    opacity: 0.7; /* немного прозрачности подсказке */ 
+} 
+.hacker-input:focus { 
+    background-color: #0d0d0d; /* фон не меняется при фокусе */ 
+    border-color: #28cc28; /* граница становится более ярко-зелёной */ 
+    box-shadow: 0 0 5px #3f3; /* зелёное свечение вокруг поля */ 
+    color: #3f3; /* цвет текста остаётся зелёным */ 
+}
+.form-group { 
+    margin-bottom: 1rem; /* нижний отступ между элементами формы */ 
+}
+.form-label { 
+    color: #3f3; /* зелёный цвет текста меток */ 
+    margin-bottom: 0.5rem; /* небольшой нижний отступ */ 
+}
+
+.btn-outline-danger { 
+    border-color: #dc3545; /* красная граница */ 
+    color: #dc3545; /* красный текст */ 
+    transition: all 0.3s ease; /* плавный переход всех изменений */ 
+} 
+.btn-outline-danger:hover { 
+    background-color: #dc3545; /* красный фон при наведении */ 
+    color: #fff; /* белый текст при наведении */ 
+}
+
+.hacker-input[type="file"] { 
+    padding: 0.5rem; /* внутренний отступ */
+    border: 1px solid #3f3; /* зелёная граница */ color: #3f3; /* зелёный текст */ 
+    background-color: #0d0d0d; /* чёрный фон */ 
+    font-family: 'Courier New', monospace; /* шрифт терминала */ 
+} 
+.hacker-input[type="file"]::file-selector-button { 
+    background-color: #3f3; /* зелёный фон кнопки выбора файла */ 
+    border: none; /* нет границы */ color: #0d0d0d; /* тёмный текст */ 
+    padding: 0.5rem 1rem; /* отступы */ font-family: 'Courier New', monospace; /* шрифт терминала */ 
+    cursor: pointer; /* курсор в виде руки */ transition: background-color 0.3s ease; /* плавная анимация фона */ 
+} 
+.hacker-input[type="file"]::file-selector-button:hover { 
+    background-color: #28cc28; /* при наведении более тёмный зелёный фон */ 
+}
