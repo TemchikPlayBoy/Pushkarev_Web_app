@@ -20,7 +20,7 @@ services:
         ipv4_address: 172.30.0.22
 
   db:
-    image: mariadb:latest
+    image: mariadb
     environment:
       MYSQL_DATABASE: first
       MYSQL_USER: user
