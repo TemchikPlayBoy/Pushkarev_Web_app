@@ -1,0 +1,1 @@
+{"schemaVersion":2,"mediaType":"application/vnd.oci.image.index.v1+json","manifests":[{"mediaType":"application/vnd.oci.image.manifest.v1+json","digest":"sha256:9049243ae846c2d09ba74b5d857072348d7dc411d32a0ff1417783a992279b71","size":1464,"annotations":{"io.containerd.image.name":"docker.io/library/mariadb:latest","org.opencontainers.image.ref.name":"latest"}}]}
