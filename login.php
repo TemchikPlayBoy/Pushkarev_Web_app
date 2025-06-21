@@ -18,7 +18,7 @@
                     <input type="text" name="login" class="form-control hacker-input" placeholder="login">
                     <input type="password" name="password" class="form-control hacker-input" placeholder="password">
                     <button class="btn btn-primary" type="submit" name="submit">Login</button>
-                    <p class="mt-3">Don't have an account? <a href="/login.php">Registration</a></p>
+                    <p class="mt-3">Don't have an account? <a href="/registration.php">Registration</a></p>
                 </div>
             </div>
         </div>
