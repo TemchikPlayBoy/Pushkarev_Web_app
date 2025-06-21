@@ -1,26 +1,3 @@
-<?php
-require_once('db.php');
-
-if (!isset($_COOKIE['User'])) {
-    header("Location: /login.php");
-    exit();
-}
-
-$link = mysqli_connect('db', 'root', 'Test123', 'first');
-$login = mysqli_real_escape_string($link, $_COOKIE['User']);
-$sql = "SELECT * FROM users WHERE username='$login'";
-$result = mysqli_query($link, $sql);
-
-if (!$result || mysqli_num_rows($result) == 0) {
-    setcookie("User", "", time() - 3600); // Удаляем куку если пользователь не найден
-    header("Location: /login.php");
-    exit();
-}
-
-$user = mysqli_fetch_assoc($result);
-mysqli_close($link);
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -44,3 +21,26 @@ mysqli_close($link);
     </div>
 </body>
 </html>
+
+<?php
+require_once('db.php');
+
+if (!isset($_COOKIE['User'])) {
+    header("Location: /login.php");
+    exit();
+}
+
+$link = mysqli_connect('db', 'root', 'Test123', 'first');
+$login = mysqli_real_escape_string($link, $_COOKIE['User']);
+$sql = "SELECT * FROM users WHERE username='$login'";
+$result = mysqli_query($link, $sql);
+
+if (!$result || mysqli_num_rows($result) == 0) {
+    setcookie("User", "", time() - 3600); // Удаляем куку если пользователь не найден
+    header("Location: /login.php");
+    exit();
+}
+
+$user = mysqli_fetch_assoc($result);
+mysqli_close($link);
+?>
