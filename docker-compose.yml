@@ -17,10 +17,10 @@ services:
       - db
     networks:
       custom_network:
-        ipv4_address: 172.30.0.22
+        ipv4_address: 172.20.0.22
 
   db:
-    image: mariadb
+    image: mariadb:latest
     environment:
       MYSQL_DATABASE: first
       MYSQL_USER: user
@@ -30,7 +30,7 @@ services:
       - db_data:/var/lib/mysql
     networks:
       custom_network:
-        ipv4_address: 172.30.0.23
+        ipv4_address: 172.20.0.23
         
 volumes:
   db_data: {}
