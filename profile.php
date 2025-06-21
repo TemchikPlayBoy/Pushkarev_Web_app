@@ -6,7 +6,7 @@ if (!isset($_COOKIE['User'])) {
     exit();
 }
 
-$link = mysqli_connect('127.0.0.1', 'root', '1234', 'first');
+$link = mysqli_connect('db', 'root', 'Test123', 'first');
 $login = mysqli_real_escape_string($link, $_COOKIE['User']);
 $sql = "SELECT * FROM users WHERE username='$login'";
 $result = mysqli_query($link, $sql);
